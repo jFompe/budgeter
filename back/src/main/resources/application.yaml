@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: budgeter
+
+budgeter:
+  expenseCategories:
+    Supermercado:
+      - Mercadona
+      - Dia
+      - LIDL
+    Gimnasio:
+      - BasicFit
+      - AltaFit
