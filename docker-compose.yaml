@@ -1,0 +1,13 @@
+name: budgeter
+
+services:
+  
+  back:
+    container_name: budgeter_back
+    image: budgeter-back
+    build: back
+    env_file:
+      - path: back/.env
+        required: true
+    ports:
+      - "8080:8080"
