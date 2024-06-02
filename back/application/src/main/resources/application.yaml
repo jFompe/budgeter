@@ -1,0 +1,37 @@
+
+spring:
+  application:
+    name: budgeter
+
+springdoc:
+  swagger-ui:
+    path: /
+    tagsSorter: alpha
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+      nordigenClient:
+        connectTimeout: 10000
+        readTimeout: 10000
+        loggerLevel: full
+
+services:
+  gocardless:
+    secret:
+      id: ${GOCARDLESS_SECRET_ID}
+      key: ${GOCARDLESS_SECRET_KEY}
+    url:
+      base: https://bankaccountdata.gocardless.com/api/v2
+      token:
+        new: /token/new/
+        refresh: /token/refresh/
+      institutions: /institutions/
+      accounts:
+        details: /accounts/{id}/details/
+        balances: /accounts/{id}/balances/
+        transactions: /accounts/{id}/transactions/
+      agreements: /agreements/enduser/
+      requisitions: /requisitions/
