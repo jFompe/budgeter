@@ -7,6 +7,6 @@ import org.mapstruct.Mapper
 @Mapper
 interface AccountDetailsMapper {
 
-	fun toDomain(accountDetails: AccountDetails): AccountDetailsDomain
+	fun toDomain(id: String, accountDetails: AccountDetails): AccountDetailsDomain
 
 }

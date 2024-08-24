@@ -1,0 +1,138 @@
+
+expenses:
+  Supermercado:
+    - Dia
+    - Carref
+    - Mercad
+    - Lupa
+    - Sweet
+    - Carnicerias
+    - Gallofa
+    - Fellina
+    - Frutos Secos
+    - Alimentacion
+    - Supercor
+    - Spar
+    - Hiper
+  Piso:
+    - Alquiler
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+    - Chino
+    - Maxichina
+    - Bazar
+    - Hfb
+    - Leroy
+    - Ocaña
+  Gimnasio:
+    - Dream
+    - Basic
+  Deporte:
+    - Nox Padel
+    - Decathlon
+  Pelu + Laser:
+    - Pelu
+    - Unico
+  Viajes:
+    - Renfe
+    - Iberia
+    - Ap8
+    - A8/a1
+    - Autoroute
+    - Caleta Homes
+    - Rent a Car
+    - Vueling
+    - PortAventura
+    - Aeropuerto
+    - Aereopuerto
+    - Jameos
+    - AirEuropa
+  Hosteleria:
+    - Bizum
+    - Cerveceria
+    - Asador
+    - Lou
+    - Manolo
+    - Parrilla
+    - Bk
+    - Donald
+    - Telepizza
+    - Kebab
+    - Burritos
+    - Kfc
+    - Cafe
+    - Restaurante
+    - Montad
+    - burger
+    - Pizzeria
+    - Justeat
+    - Pizza
+    - Restaur
+    - Pindal
+    - Bavarian Village
+    - Grosso Napoletano
+    - Foster's
+    - El Llosu
+    - Bodi
+    - Creperie
+    - Rest Calderon
+    - Chipotle
+    - Costa Coffee
+    - Kebap
+  Transporte:
+    - uber
+    - Tus
+    - Taxi
+    - Parking
+    - Empresa Munic
+    - Pk
+    - park
+    - Oficina Princip
+    - Nueva Alisal
+    - P Numancia
+    - App CRTM
+    - TFL Travel
+  Farmacia:
+    - Farmacia
+    - Fcia. Avello
+  Ocio:
+    - Cinesa
+    - Kinepolis
+    - Ocine
+    - Nuphy
+    - RiotGames
+  Festivales:
+    - Viveiro
+    - Bring The Noise
+    - Enterticket
+    - Resurrection
+  Ropa:
+    - Stradivarius
+    - Pull And Bear
+    - PullAndBear
+    - Pull & Bear
+    - Hm
+    - Merchandising
+  Suscripciones:
+    - Spotify
+    - Espotifai
+    - Prime
+    - adventocode
+    - Linkedin
+  Laura:
+    - Laura
+    - Nyx
+    - Perfumeria
+    - casadelasbatas
+    - Caja del Crimen
+  Efectivo:
+    - Reintegro
+
+earnings:
+  Bizum:
+  Nomina:
+  Finiquito:
+  Efectivo:
+  Transferencias:

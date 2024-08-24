@@ -1,6 +1,7 @@
 package com.jfompe.budgeter.domain.model.account
 
 data class AccountDetails(
+	val id: String,
 	val iban: String,
 	val currency: String,
 	val ownerName: String,

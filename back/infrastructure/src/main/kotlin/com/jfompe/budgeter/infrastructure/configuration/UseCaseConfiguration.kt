@@ -4,6 +4,7 @@ import com.jfompe.budgeter.domain.repository.AccountRepository
 import com.jfompe.budgeter.domain.repository.AgreementRepository
 import com.jfompe.budgeter.domain.repository.InstitutionRepository
 import com.jfompe.budgeter.domain.repository.RequisitionRepository
+import com.jfompe.budgeter.domain.service.TransactionCategorizerService
 import com.jfompe.budgeter.domain.usecase.account.CreateAccountRequisitionUseCase
 import com.jfompe.budgeter.domain.usecase.account.GetAccountsDetailsUseCase
 import com.jfompe.budgeter.domain.usecase.institution.GetInstitutionsByCountryUseCase
@@ -34,7 +35,8 @@ class UseCaseConfiguration {
 
 	@Bean
 	fun getAccountTransactionUseCase(
-		accountRepository: AccountRepository
-	) = GetAccountTransactionUseCase(accountRepository)
+		accountRepository: AccountRepository,
+		transactionCategorizerService: TransactionCategorizerService
+	) = GetAccountTransactionUseCase(accountRepository, transactionCategorizerService)
 
 }

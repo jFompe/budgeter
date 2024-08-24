@@ -18,7 +18,7 @@ class GoCardlessAccountRepository(
 	override fun getAccountDetails(accountId: String): AccountDetailsDomain? =
 		try {
 			accountFeignClient.getAccountDetails(accountId)
-				.let { accountDetailsMapper.toDomain(it.account) }
+				.let { accountDetailsMapper.toDomain(accountId, it.account) }
 		} catch (e: Exception) {
 			null
 		}

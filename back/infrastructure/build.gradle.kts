@@ -21,6 +21,7 @@ dependencies {
     implementation("org.springframework:spring-beans:6.1.8")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.1.1")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.1")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.17.1")
     implementation("org.mapstruct:mapstruct:1.5.5.Final")
     kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
