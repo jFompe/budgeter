@@ -11,7 +11,7 @@ export async function getInstitutions(countryId='ES') {
 }
 
 
-export async function createAccountRequisition(institutionId, maxDays) {
+export async function createAccountRequisition(institutionId, maxDays = 90) {
     const body = {
         institutionId: institutionId,
         maxTransactionDays: maxDays,
@@ -21,11 +21,13 @@ export async function createAccountRequisition(institutionId, maxDays) {
 
     const response = await fetch(`${BASE_PATH}/api/v1/accounts`, {
         method: 'POST',
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })    
 
-    })
-
-    return response.json().id
+    return response.json()
 }
 
 
