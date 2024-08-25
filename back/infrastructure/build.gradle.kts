@@ -19,6 +19,7 @@ allOpen {
 dependencies {
     implementation(project(":domain"))
     implementation("org.springframework:spring-beans:6.1.8")
+    implementation("org.springframework.boot:spring-boot-starter-web:3.3.3")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.1.1")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.1")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.17.1")
