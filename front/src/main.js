@@ -12,11 +12,9 @@ import App from './App.vue'
 
 // Composables
 import { createApp } from 'vue'
-import { createStore } from 'vuex'
-import { createRouter } from 'vue-router'
+import store from './store'
+import router from './router'
 
-const store = createStore()
-const router = createRouter()
 
 const app = createApp(App)
 

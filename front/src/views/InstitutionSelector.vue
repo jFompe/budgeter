@@ -8,19 +8,19 @@
         </v-row>
         <v-row>
             <v-col
-                v-for="bank in banks"
-                :key="bank.id"
+                v-for="institution in institutions"
+                :key="institution.id"
                 cols="2"
             >
-                <v-card @click="selectBank(bank)">
-                        <v-img
-                            :src="bank.logo"
-                            class="white--text align-end"
-                            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                            height="200px"
-                        >
-                        <v-card-title v-text="bank.name"></v-card-title>
-                    </v-img>
+                <v-card 
+                    height="300px"
+                    :image="institution.logo"
+                    @click="selectInstitution(institution)"
+                >
+                    <v-card-title
+                        style="background-color: black; opacity: 0.7;"
+                        v-text="institution.name"
+                    ></v-card-title>
                 </v-card>
             </v-col>
         </v-row>
@@ -31,12 +31,14 @@
 export default {
     name: 'InstitutionSelector',
 
-    data: { 
-        backFilter: ''
-    },
+    data: () => ({
+        bankFilter: ''
+    }),
     computed: {
-        banks() {
-            return this.$store.getters.getInstitutions.filter(b -> b.contains(this.backFilter))
+        institutions() {
+            const filter = this.bankFilter.toLowerCase()
+            return this.$store.getters.getInstitutions
+                .filter(inst => inst.name.toLowerCase().includes(filter))
         }
     },
     async beforeCreate() {
