@@ -11,19 +11,22 @@ export default createStore({
     getters: {
         isLoading: state => state.loading
     },
-    actions: {
-        SET_LOADING({ commit }, isLoading) {
-            commit('_setLoading', isLoading)
-        }
-    },
-    mutations: {
-        _setLoading(state, payload) {
-            state.loading = payload
-        }
-    },
 
     modules: {
         institutions,
         accounts
-    }
+    },
+
+    plugins: [
+        store => {
+            store.subscribeAction({
+                before: (_, state) => {
+                    state.loading = true
+                },
+                after: (_, state) => {
+                    state.loading = false
+                }
+            })
+        }
+    ]
 })

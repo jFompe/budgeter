@@ -42,16 +42,12 @@ export default {
         }
     },
     async beforeCreate() {
-        this.$store.dispatch('SET_LOADING', true)
         await this.$store.dispatch('FETCH_INSTITUTIONS')
-        this.$store.dispatch('SET_LOADING', false)
     },
     methods: {
         async selectInstitution(institution) {
-            this.$store.dispatch('SET_LOADING', true)
             await this.$store.dispatch('CREATE_ACCOUNT', institution)
             window.open(this.$store.getters.getRequisitionLink, '_self') // _blank for new tab
-            this.$store.dispatch('SET_LOADING', false)
         }
     }
 }
