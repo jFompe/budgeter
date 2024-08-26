@@ -2,6 +2,7 @@
 
 const BASE_PATH = 'http://localhost:8080'
 const REDIRECT_URI = 'http://localhost:3000/dashboard'
+const DEFAULT_MAX_DAYS = 90
 
 
 
@@ -11,10 +12,10 @@ export async function getInstitutions(countryId='ES') {
 }
 
 
-export async function createAccountRequisition(institutionId, maxDays = 90) {
+export async function createAccountRequisition(institutionId, maxDays = DEFAULT_MAX_DAYS) {
     const body = {
         institutionId: institutionId,
-        maxTransactionDays: maxDays,
+        maxTransactionDays: Math.min(maxDays, DEFAULT_MAX_DAYS),
         redirectUri: REDIRECT_URI,
         lang: 'ES'
     }
