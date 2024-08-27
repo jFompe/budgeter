@@ -7,6 +7,7 @@ import com.jfompe.budgeter.domain.repository.AccountRepository
 import com.jfompe.budgeter.infrastructure.repository.account.mapper.AccountDetailsMapper
 import com.jfompe.budgeter.infrastructure.repository.account.mapper.BalanceMapper
 import com.jfompe.budgeter.infrastructure.repository.account.mapper.TransactionMapper
+import feign.FeignException
 
 class GoCardlessAccountRepository(
 	private val accountFeignClient: AccountFeignClient,
@@ -18,8 +19,16 @@ class GoCardlessAccountRepository(
 	override fun getAccountDetails(accountId: String): AccountDetailsDomain? =
 		try {
 			accountFeignClient.getAccountDetails(accountId)
+				.also { println(it) }
 				.let { accountDetailsMapper.toDomain(accountId, it.account) }
+		} catch (e: FeignException.TooManyRequests) {
+			println("[ERROR] Too many requests!!! $e")
+			null
+		} catch (e: FeignException.NotFound) {
+			println("[ERROR] Account not found! $e")
+			null
 		} catch (e: Exception) {
+			println("[ERROR] $e")
 			null
 		}
 
