@@ -26,9 +26,11 @@ expenses:
     - Hfb
     - Leroy
     - Ocaña
+    - Traspaso
   Gimnasio:
     - Dream
     - Basic
+    - Altafit
   Deporte:
     - Nox Padel
     - Decathlon
@@ -49,6 +51,11 @@ expenses:
     - Aereopuerto
     - Jameos
     - AirEuropa
+    - Melia
+    - Warner Bros
+    - Fuente De
+    - London
+    - Cambridge
   Hosteleria:
     - Bizum
     - Cerveceria
@@ -81,6 +88,7 @@ expenses:
     - Chipotle
     - Costa Coffee
     - Kebap
+    - Ramen
   Transporte:
     - uber
     - Tus
@@ -103,11 +111,17 @@ expenses:
     - Ocine
     - Nuphy
     - RiotGames
+    - Lego
+    - Bowling
+    - Entradas Real
+    - Kickstarter
   Festivales:
     - Viveiro
     - Bring The Noise
     - Enterticket
     - Resurrection
+    - Entradas Evento
+    - Ticketmaster
   Ropa:
     - Stradivarius
     - Pull And Bear
@@ -115,6 +129,7 @@ expenses:
     - Pull & Bear
     - Hm
     - Merchandising
+    - Zalando
   Suscripciones:
     - Spotify
     - Espotifai
@@ -129,6 +144,10 @@ expenses:
     - Caja del Crimen
   Efectivo:
     - Reintegro
+  Impuestos:
+    - I.R.P.F
+    - UPM
+    - Politecnica
 
 earnings:
   Bizum:
